@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+void calculator(int x,char y,int z){
+    if(y=='+')cout<< x+z;
+    else if(y=='*')cout<< x*z;
+    else if(y=='/'){
+        if(z!=0)cout<<x/z;
+        else cout<<"not defined";
+    }
+    else if (y=='-')cout<< x-z;
+    else cout<<"error";
+}
+
+int main(){
+    int n;
+    cout<<"TYPE FIRST NUMBER!\n";
+    cin>>n;
+    
+    cout<<"OPERATOR(+,-,*,/)\n";
+    char k;
+    cin>>k;
+    int m;
+    cout<<"TYPE SECOND NUMBER!\n";
+    cin>>m;
+    cout<<"RESULT:"<<" ";
+    calculator(n,k,m);
+    return 0;
+}
